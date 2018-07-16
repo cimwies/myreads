@@ -37,12 +37,14 @@ When you navigate back to the main page from the search page, you should instant
 ### How to view?
 
 1. Clone the repo using this command:
-‘https://github.com/cimwies/feedreader-test.git‘ 
+
+```sh
+git clone https://github.com/cimwies/feedreader-test.git
+```
 
 2. Install
 * Dependencies: [Node.js](https://nodejs.org/en/) v0.12.7 or above
-* t
-Then checkout the project and run:
+* Then checkout the project and run:
 
 ```sh
 npm install
