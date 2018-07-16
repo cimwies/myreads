@@ -1,7 +1,5 @@
 # MyReads: A Book Tracking App
 
-#### _Three Stage Course Material Project - Restaurant Reviews_
-
 Udacity FEND Nanodegree Program - Project #7
 
 ## Table of Contents
