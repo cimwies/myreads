@@ -42,8 +42,9 @@ When you navigate back to the main page from the search page, you should instant
 ‘https://github.com/cimwies/feedreader-test.git‘ 
 
 2. Install
-* [Node.js](https://nodejs.org/en/) v0.12.7 or above
-* then checkout the project and run:
+* Dependencies: [Node.js](https://nodejs.org/en/) v0.12.7 or above
+* t
+Then checkout the project and run:
 
 ```sh
 npm install
@@ -62,7 +63,11 @@ With your server running, visit the site: `http://localhost:3000`, and look arou
 ## Sources used in Code
 
 * [React JavaScript library](https://reactjs.org/)
-* [leafletjs](https://reactnd-books-api.udacity.com)
+* [BooksAPI](https://reactnd-books-api.udacity.com)
+* [module: prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html)
+* [module: sort-by](https://www.npmjs.com/package/sort-by)
+* [module: react-router-dom](https://www.npmjs.com/package/react-router-dom)
+
 
 ## Info material
 

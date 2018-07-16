@@ -41,14 +41,4 @@ export const search = (query) =>
   }).then(res => res.json())
     .then(data => data.books)
 
-
-export const remove = (book, shelf) =>
-  fetch(`${api}/books/${book.id}`, {
-   method: 'DELETE',
-   headers: {
-      ...headers,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ shelf })
-  }).then(res => res.json())
    
