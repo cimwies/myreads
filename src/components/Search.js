@@ -53,70 +53,70 @@ class Search extends Component {
         );
     }
 
-   updateExistingBookShelves(searchResults) {
-      if(!searchResults.error) {
-          const myBooks = this.props.books
-          const addToState = searchResults.filter((result) => myBooks.find(b => {
-              if(b.id === result.id) {
-                  result.shelf = b.shelf
-                  return result
-                } else {
-                  return null
-                }
-          }))
-      myBooks.concat(addToState)
-      return searchResults.sort(sortBy('authors'))
-      }
-  }
+    updateExistingBookShelves(searchResults) {
+        if(!searchResults.error) {
+            const myBooks = this.props.books
+            const addToState = searchResults.filter((result) => myBooks.find(b => {
+                if(b.id === result.id) {
+                    result.shelf = b.shelf
+                    return result
+                  } else {
+                    return null
+                  }
+            }))
+        myBooks.concat(addToState)
+        return searchResults.sort(sortBy('authors'))
+        }
+    }
 
 
-  render = () => {
+    render = () => {
 
-      const { query, results } = this.state;
-      const { onUpdateBookShelf } = this.props;
+        const { query, results } = this.state;
+        const { onUpdateBookShelf } = this.props;
 
-      return(
-          <div className="search-books">
-              <div className="search-books-bar">
-                  <div className="return-home">
-                      <Link to="/">Return home</Link>
-                  </div>
-                  <div className="search-books-input-wrapper">
-                      <input
-                          type = "text"
-                          placeholder = "Search by title, author or subject"
-                          value = {this.state.query}
-                          onChange = {(event) => this.updateQuery(event.target.value)}
-                      />
-                  </div>
-                  <button
-                      className="close-search"
-                      onClick={ this.clearQuery }>
-                  </button>
-              </div>
-              <div className="search-books-results">
-                  <ol className="books-grid">
-                      { results ? (
-                          results.map((book) => (
-                          <li key = { book.id }>
-                              <Book
-                              key={book.title}
-                              book={book}
-                              updateBookShelf={onUpdateBookShelf} 
-                              />
-                          </li>   
-                          ))
-                      ) : (
-                          <h4>No results for, "{query}"</h4>
-                      )}
-                  </ol>
-                  <div className="return-home">
-                      <Link to="/">Return home</Link>
-                  </div>
-              </div>
-          </div>
-      );
-  }
+        return(
+            <div className="search-books">
+                <div className="search-books-bar">
+                    <div className="return-home">
+                        <Link to="/">Return home</Link>
+                    </div>
+                    <div className="search-books-input-wrapper">
+                        <input
+                            type = "text"
+                            placeholder = "Search by title, author or subject"
+                            value = {this.state.query}
+                            onChange = {(event) => this.updateQuery(event.target.value)}
+                        />
+                    </div>
+                    <button
+                        className="close-search"
+                        onClick={ this.clearQuery }>
+                    </button>
+                </div>
+                <div className="search-books-results">
+                    <ol className="books-grid">
+                        { results ? (
+                            results.map((book) => (
+                            <li key = { book.id }>
+                                <Book
+                                key={book.title}
+                                book={book}
+                                updateBookShelf={onUpdateBookShelf} 
+                                />
+                            </li>   
+                            ))
+                        ) : (
+                            <h4>No results for, "{query}"</h4>
+                        )}
+                    </ol>
+                    <div className="return-home">
+                        <Link to="/">Return home</Link>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
 }
 
