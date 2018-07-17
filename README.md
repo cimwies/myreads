@@ -39,7 +39,7 @@ When you navigate back to the main page from the search page, you should instant
 1. Clone the repo using this command:
 
 ```sh
-git clone https://github.com/cimwies/feedreader-test.git
+git clone https://github.com/cimwies/myreads.git
 ```
 
 2. Install
