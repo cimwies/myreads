@@ -59,16 +59,16 @@ class Search extends Component {
           const addToState = searchResults.filter((result) => myBooks.find(b => {
               if(b.id === result.id) {
                   result.shelf = b.shelf
-                   return result
+                  return result
                 } else {
-                   return null
+                  return null
                 }
           }))
       myBooks.concat(addToState)
       return searchResults.sort(sortBy('authors'))
       }
   }
-  
+
 
   render = () => {
 
