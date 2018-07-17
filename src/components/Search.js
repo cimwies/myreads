@@ -8,7 +8,7 @@ import Book from './Book';
 
 class Search extends Component {
 
-    navigate() {
+    navigate = () => {
         this.props.history.replaceState(null, "/");
     }
 
@@ -21,7 +21,7 @@ class Search extends Component {
         onUpdateBookShelf: PropTypes.func.isRequired
     }
 
-    updateQuery(query) {
+    updateQuery = (query) => {
         if(query.length > 0 ) {
             this.setState(() => ({
             results: [],
@@ -41,7 +41,7 @@ class Search extends Component {
       })
     }
 
-    bookSearch(query) {
+    bookSearch = (query) => {
         if (query.length > 0)
             BooksAPI.search(query)
             .then(searchResults => {
@@ -53,7 +53,7 @@ class Search extends Component {
         );
     }
 
-    updateExistingBookShelves(searchResults) {
+    updateExistingBookShelves = (searchResults) => {
         if(!searchResults.error) {
             const myBooks = this.props.books
             const addToState = searchResults.filter((result) => myBooks.find(b => {
@@ -107,7 +107,7 @@ class Search extends Component {
                             </li>   
                             ))
                         ) : (
-                            <h4>No results for, "{query}"</h4>
+                            <h4>Sorry, no results for, "{query}"</h4>
                         )}
                     </ol>
                     <div className="return-home">
