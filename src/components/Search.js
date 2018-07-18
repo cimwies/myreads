@@ -22,10 +22,10 @@ class Search extends Component {
     }
 
     updateQuery = (query) => {
-        if(query.length > 0 ) {
-            this.setState(() => ({
+        if(query.trim()) {
+            this.setState(({
             results: [],
-            query: query.trim()
+            query
         }))
             this.bookSearch(query)
         }
